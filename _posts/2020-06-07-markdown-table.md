@@ -2,7 +2,7 @@
 layout: post 
 title: Markdown表格语法
 date: 2020-06-07
-Author: Sesame
+author: Sesame
 tags: [markdown, grammar]
 comments: true 
 ---
