@@ -1,0 +1,52 @@
+I"z<h2 id="表格语法以及展示效果">表格语法以及展示效果</h2>
+
+<p>在进行markdown文件编辑的时候难免需要进行表格的创建，本文将简要介绍如何使用markdown语法创建简单表格。</p>
+
+<h3 id="语法">语法</h3>
+<p>使用markdown创建表格的语法如下图所示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title1 | title2 | title3 | title4 
+-      | :-     | -:     | :-: 
+banana | $1 | 5 | 100
+apple | $2 | 10 | 50 
+strawberry | $5 | 20 | 999
+</code></pre></div></div>
+<h3 id="效果">效果</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>title1</th>
+      <th style="text-align: left">title2</th>
+      <th style="text-align: right">title3</th>
+      <th style="text-align: center">title4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>banana</td>
+      <td style="text-align: left">$1</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: center">100</td>
+    </tr>
+    <tr>
+      <td>apple</td>
+      <td style="text-align: left">$2</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: center">50</td>
+    </tr>
+    <tr>
+      <td>strawberry</td>
+      <td style="text-align: left">$5</td>
+      <td style="text-align: right">20</td>
+      <td style="text-align: center">999</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="语法解释">语法解释</h2>
+<ol>
+  <li>表格第二行 :-, -:, :-: 分别表示内容和标题栏左对齐，右对齐，居中。</li>
+  <li>内容和｜之间的多余空格忽略。</li>
+  <li>默认情况（-）下，标题栏和内容居左对齐。</li>
+</ol>
+:ET
