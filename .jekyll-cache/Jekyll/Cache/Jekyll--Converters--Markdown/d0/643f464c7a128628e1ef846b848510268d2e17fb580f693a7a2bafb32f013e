@@ -1,0 +1,65 @@
+I"�<p>使用mac的时候需要对文件进行压缩，mac进行文件压缩使用自带的软件功能少，支持的格式也少。使用app store或者其他的
+三方压缩软件一般都需要付费。本文对于mac使用cli（命令行工具）进行文件压缩方法的总结。
+<!-- more --></p>
+
+<h2 id="rar">rar</h2>
+<p>rar 是一个比较主流的压缩算法（格式），其版权为具体公司所有，其他三方工具如果需要进行rar压缩需要付费，所以很多软件
+并不支持rar压缩格式。（尤其是mac，撰写本文缘由也是寻找合适的rar压缩、解压工具）</p>
+
+<h3 id="rar-cli-压缩工具下载">rar cli 压缩工具下载</h3>
+<p>下载地址 <a href="https://www.rarlab.com/download.htm">https://www.rarlab.com/download.htm</a>
+选择合适的「RAR」文件版本下载。（本文撰写时间，需要下载的文件名称为：<code class="language-plaintext highlighter-rouge">RAR 5.91 beta 1 for macOS (64 bit)</code>）</p>
+
+<h3 id="使用方式">使用方式</h3>
+
+<h4 id="安装所谓安装就是将下载下来的文件放在某一个合适的位置">安装(所谓安装，就是将下载下来的文件放在某一个·合适·的位置)</h4>
+<p>使用「聚焦搜索」（默认的快捷唤出按键为<code class="language-plaintext highlighter-rouge">Command+空格</code>）输入<code class="language-plaintext highlighter-rouge">Terminal</code>或者<code class="language-plaintext highlighter-rouge">iterm</code>
+以下命令在Terminal软件中输入</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># # 符号之后为注释，起解释作用不是命令</span>
+
+<span class="c"># 工作目录至刚才下载的「RAR」文件存储的地方，以下命令提供参考</span>
+<span class="nb">cd</span> ~/Downloads <span class="c">#如有问题，可尝试 cd ~/下载</span>
+
+<span class="c"># 解压缩「RAR」文件</span>
+<span class="nb">tar</span> <span class="nt">-xzvf</span> rarosx-5.9.1b1.tar.gz <span class="c"># tar -xzvf &lt;文件名&gt;</span>
+
+<span class="c"># 工作目录至解压文件内部（如有问题，自行解决）</span>
+<span class="nb">cd </span>rar <span class="c"># 没有报错就没问题，UNIX哲学</span>
+
+<span class="c"># 将命令放在指定（PATH）路径，以下提供一个一般来说一定有的路径</span>
+<span class="nb">sudo cp </span>rar /usr/bin <span class="c"># 需要输入系统用户密码，根据需要 /usr/bin 可以换成 /usr/loacl/bin</span>
+</code></pre></div></div>
+
+<h4 id="使用-rar">使用 rar</h4>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 使用 rar 进行压缩</span>
+
+<span class="c"># 举例，将 file1，file2, file3 压缩为「压缩包名称.rar」文件</span>
+rar a 压缩包名称.rar file1 file2 file3
+
+<span class="c"># 举例，解压「压缩包.rar」文件</span>
+rar x 压缩包.rar
+
+
+<span class="c"># tips（好像有人找不到压缩后的文件，问题本质是不理解路径问题，可以百度「Linux文件路径」进行理解</span>
+<span class="c"># 「open . 」命令可以在Terminal软件中直接打开「访达」且访达的目录为当前工作路径</span>
+<span class="c"># 「rar」命令输入后可以直接显示 rar 软件的用法，其他rar的使用方式参考该用法</span>
+</code></pre></div></div>
+
+<h2 id="7z-todo">7z #TODO</h2>
+
+<h3 id="install">install</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+
+<span class="nv">$ </span>brew search 7z  <span class="c"># result p7zip</span>
+
+<span class="nv">$ </span>brew <span class="nb">install </span>p7zip
+</code></pre></div></div>
+
+<h3 id="usage">usage</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>7z <span class="nt">--help</span>
+</code></pre></div></div>
+
+<h2 id="gzip-bzip2-todo">gzip, bzip2 #TODO</h2>
+
+<h2 id="zip-todo">zip #TODO</h2>
+:ET
