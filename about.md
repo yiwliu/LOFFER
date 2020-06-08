@@ -2,6 +2,16 @@
 layout: page
 title: 关于
 permalink: /about/
+comments: true
 ---
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+个人博客，记录学习路途上的知识，以便回顾和查阅。欢迎指正评论。
+
+
+## 致谢
+* LOFFER模版提供者
+
+
+{% include gitalk.html %}
+
+
