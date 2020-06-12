@@ -21,6 +21,15 @@ banana | $1 | 5 | 100
 apple | $2 | 10 | 50 
 strawberry | $5 | 20 | 999
 ```
+### 语法(在Typora中)
+*—的数量需要是三个*
+```
+title1 | title2 | title3 | title4 
+---   | :---    | ---:     | :---: 
+banana | $1 | 5 | 100
+apple | $2 | 10 | 50 
+strawberry | $5 | 20 | 999
+```
 ### 效果
 
 title1 | title2 | title3 | title4 
